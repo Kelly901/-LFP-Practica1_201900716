@@ -13,7 +13,7 @@ class Lista:
         espacio=texto.split("\n")
         buscar=""
         numero=""
-        buscarN=""
+        
         buscar3=""
         buscar4=""
         for i in espacio:
@@ -32,14 +32,14 @@ class Lista:
             #print(letras)
             
             buscar1=letras2.split(",")
-            print(buscar1)
+            
             #buscar=re.split(r"ORDENAR",letras2)
             if len(buscar1)==2:
                 for i in range(2):
                     if buscar1[0]=="ORDENAR":
                         ordenar=buscar1[0]
                         buscar=buscar1[1]
-                        print("BUSCAR----"+buscar)
+                        
                         numero1=re.split(r"BUSCAR",buscar)
                         buscar2=re.split(r"[0-9]",buscar)
                         buscar3=re.split(r" ",buscar2[0])
@@ -47,20 +47,19 @@ class Lista:
                         buscar4=buscar3[len(buscar3)-2]
                         
                         numero=numero1[1]
-                        print("Este es buscar:"+buscar4+numero)
+                        
                     else:
                         ordenar1=re.split(r" ",buscar1[1])
-                        print(ordenar1[len(ordenar1)-1])
+                        
                         ordenar=ordenar1[len(ordenar1)-1]
-                        print(".----",ordenar)
+                        
                         buscar=buscar1[0]
                     
                         numero1=re.split(r"BUSCAR",buscar)
                         buscar2=re.split(r"[0-9]",buscar)
                         buscar3=re.split(r" ",buscar2[0])
                         buscar4=buscar3[0]
-                        print("->"+buscar3[0]+"-")
-                        print("--",buscar3,"--")
+                        
                         numero=numero1[1]
 
                    

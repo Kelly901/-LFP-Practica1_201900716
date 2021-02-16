@@ -23,7 +23,7 @@ class Busqueda:
         if len(b)==0:
             return nombre+": "+lista +"BUSQUEDA: "+ n +" POSICIONES = NO ENCONTRADO"        
                 
-        return nombre+" "+lista+" BUSQUEDA POSICIONES = ",b
+        return nombre+": "+lista+" BUSQUEDA POSICIONES = ",b
 
         
     

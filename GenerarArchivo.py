@@ -1,7 +1,9 @@
 import webbrowser
 from Lista import Lista
 from Busqueda import Busqueda
+from Orden import Orden
 bus=Busqueda()
+orden=Orden()
 class GenerarArchivo:
     
     def generar_archivo(self):
@@ -9,12 +11,19 @@ class GenerarArchivo:
        
 
         f=open('Reporte.html','w')
+        ordenados=""
         palabra=""
+        #Reocrrer la lista para obteners los datos ordenados:
+        for dato in Lista.datos:
+            if dato.ordenar=="ORDENAR":
+                ordenados=ordenados+"<h3>"+dato.nombre+": ORDENADOS ="+orden.bubleSort(dato.lista)+"</h3>"
+                
+        #Recorrer la lista de tipo objeto para poder obtener los datos:
         for dato in Lista.datos:
            
             if dato.buscar=="BUSCAR":
                 palabra=palabra+"<h3>"+" BUSQUEDA POSICIONES = "+str(bus.buscar(dato.nombre,dato.lista,dato.numero))+"</h3>"
-
+        #Cadena con la estructura HTML para generar una pagina
         cuerpo= """<!DOCTYPE html>
                 <html lang="en">
 
@@ -71,11 +80,12 @@ class GenerarArchivo:
             }
             </style>
             <h1 id="Titulo">Reporte de Datos</h1>
-            <h3>Ordenados</h3>
-            <h2 id="orden">Datos Ordenados</h2>
             
+            <h2 id="orden">Datos Ordenados</h2>
+            """+ordenados+"""
             <h2 id=buscar>Posiciones de los datos buscados</h2>
             """+palabra+"""
+            <h3> </h3>
             </body>
 
             </html>"""

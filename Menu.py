@@ -26,12 +26,15 @@ class Menu:
             print("Cargar archivo de entrada")
             correr.test()
             print(correr.texto)
+            print("                     ")
             print("----------")
-            m.menu()
+            self.menu()
         elif opcion=="2":
+            print("                            ")
             print("----------------")
-            print(">>>>>>Datos ordenados<<<<<<<<<<")
+            print(">>>>>>>>>>>>>Datos ordenados<<<<<<<<<<<<<<<<")
             orden.ordenamiento_bublesort()
+            print("                              ")
             print("------------------")
             self.menu()
             
@@ -39,19 +42,25 @@ class Menu:
             print(">>>>>>>>>Busqueda de posicones de dato<<<<<<<<<")
             buscar.buscar_posicion()
             print("busqueda finalizada")
+            print("                       ")
             print("---------------------")
             self.menu()
 
         elif opcion=="4":
-            print(">>>>>>Desplegar todas<<<<<<<<<<")
+            print("                                 ")
+            print(">>>>>>>>>>>>>>DESPLEGAR TODAS<<<<<<<<<<<<<<<")
             orden.ordenamiento_bublesort()
             print("      ")
             buscar.buscar_posicion()
+            print("        ")
             print("------------------")
             self.menu()
         elif opcion=="5":
+            print("                       ")
             print("Esocgio la opcion 5")
             gen.generar_archivo()
+            print("Archivo generado ")
+            self.menu()
         elif opcion=="6":
             print("Adios")
         else:
@@ -59,6 +68,5 @@ class Menu:
             print("Opcion erronea")
             self.menu()                     
 
-m=Menu()
-m.menu()
+
 
