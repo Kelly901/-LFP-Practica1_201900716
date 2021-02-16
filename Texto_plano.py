@@ -2,6 +2,7 @@ from tkinter import filedialog as FileDialog
 from Lista import Lista
 
 lista=Lista()
+
 class Texto_Plano:
     
     texto=0
@@ -15,8 +16,7 @@ class Texto_Plano:
         
         
         
+        
 
-correr=Texto_Plano()
-correr.test()
-print(correr.texto)
+
 lista.imprimir()
