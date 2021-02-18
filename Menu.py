@@ -62,7 +62,7 @@ class Menu:
             print("Archivo generado ")
             self.menu()
         elif opcion=="6":
-            print("Adios")
+            print("Programa Finalizado")
         else:
             print("---------------------")
             print("Opcion erronea")

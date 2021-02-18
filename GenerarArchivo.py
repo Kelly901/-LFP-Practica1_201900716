@@ -10,7 +10,7 @@ class GenerarArchivo:
        
        
 
-        f=open('Reporte.html','w')
+        fi=open('Reporte.html','w')
         ordenados=""
         palabra=""
         #Reocrrer la lista para obteners los datos ordenados:
@@ -89,7 +89,7 @@ class GenerarArchivo:
             </body>
 
             </html>"""
-        f.write(cuerpo)
-        f.close()
+        fi.write(cuerpo)
+        fi.close()
         webbrowser.open_new_tab('Reporte.html')
       

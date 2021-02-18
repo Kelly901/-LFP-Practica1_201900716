@@ -4,14 +4,7 @@ from Datos import Datos
 dato=Lista()
 class Orden:
 
-    #Prueba
-    def MetodoPrueba(self):
-
-        arreglo=['2','3','5','34']
-        arreglo2=[]
-        for i in arreglo:
-            arreglo2.append(int(i))
-
+    
         
 
     #Metodo de ordenamietno de burbuja

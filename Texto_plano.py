@@ -9,8 +9,8 @@ class Texto_Plano:
 
     def test(self):
         fichero= FileDialog.askopenfilename(title="Abrir un fichero")
-        f=open(fichero,'r')
-        mensaje=f.read()
+        fi=open(fichero,'r')
+        mensaje=fi.read()
         self.texto=mensaje
         lista.descomponer(mensaje)
         
